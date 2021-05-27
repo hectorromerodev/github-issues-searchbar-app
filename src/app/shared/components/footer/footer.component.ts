@@ -4,8 +4,8 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-footer',
   template: `
-  <footer>
-    <p>
+  <footer class="center">
+    <p class="text-white">
       {{message}}
       <a href="{{url}}" rel="noopener" target="_blank" >{{name}}</a>
     </p>
