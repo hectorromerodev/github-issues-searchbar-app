@@ -59,7 +59,7 @@ footer{
 
 .title {
   font-weight: 700;
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 5vw + .5rem, 4rem);
 }
 
 .text-white {
@@ -81,12 +81,16 @@ footer{
 }
 
 .position{
- &-r{
-  margin-left: auto;
- }
- &-l{
-  margin-right: auto;
- }
+  &-r{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+  &-l{
+    display: flex;
+    justify-content: flex-start;
+    margin-right: auto;
+  }
 }
 
 .space{
@@ -100,7 +104,9 @@ footer{
 }
 
 .button{
+  font-size: 2rem;
   cursor: pointer;
-  margin: .8rem;
+  background: transparent;
+  border: none;
 }
 
