@@ -3,12 +3,14 @@ popup-modal{
   // modal are hidden by default
   display: none;
   .popup-modal{
+    // max-width: 80%;
     // modal fixed across the whole screen
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    top: 50%;
+    right: -100%;
+    bottom: -25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     // z-index must be higher than modal-background
     z-index: 100;
     // enable scrolling for tall modals
@@ -16,8 +18,6 @@ popup-modal{
     .popup-modal-body{
       padding: 2rem;
       background: #fff;
-      // margin exposes part of the modal bg
-      margin: 40px;
     }
   }
   .popup-modal-background{

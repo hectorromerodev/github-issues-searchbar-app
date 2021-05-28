@@ -10,14 +10,15 @@ import { ModalService } from '@service/modal.service';
 })
 export class ModalComponent implements OnInit, OnDestroy {
   @Input() id: string = '';
+  @Input() width: string = '85%';
   private element: HTMLElement;
 
   constructor(
     private modalServ: ModalService,
-    private ele: ElementRef,
+    private readonly ele: ElementRef,
     @Inject(DOCUMENT) private doc: Document
   ) {
-    this.element = ele.nativeElement;
+    this.element = this.ele.nativeElement;
   }
 
   ngOnInit(): void {
@@ -30,7 +31,7 @@ export class ModalComponent implements OnInit, OnDestroy {
     this.doc.body.appendChild(this.element);
     // close modal on background click
     this.element.addEventListener('click', (el: any) => {
-      if (el.target.className === 'popup-modal') {
+      if (el.target.className === 'popup-modal-background') {
         this.close();
       }
     });
