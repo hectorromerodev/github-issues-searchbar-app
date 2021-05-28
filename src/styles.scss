@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
-
-$primary-color: rgb(93, 93, 233);
-$secondary-color: rgb(71, 71, 218);
-$text-color: rgb(255, 255, 255);
+@import './variables.scss';
 
 *,
 *::before,
@@ -30,13 +27,6 @@ ul{
 a{
   text-decoration: none;
   color: $text-color;
-}
-
-header{
-  max-height: 7rem;
-  height: 7rem;
-  background-color: $primary-color;
-  font-size: 3rem;
 }
 
 footer{
