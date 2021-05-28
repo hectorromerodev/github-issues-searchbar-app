@@ -1,0 +1,39 @@
+// MODAL STYLES
+popup-modal{
+  // modal are hidden by default
+  display: none;
+  .popup-modal{
+    // modal fixed across the whole screen
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // z-index must be higher than modal-background
+    z-index: 100;
+    // enable scrolling for tall modals
+    overflow: auto;
+    &-body{
+      padding: 2rem;
+      background: #fff;
+      // margin exposes part of the modal bg
+      margin: 40px;
+    }
+    &-background{
+      // modal bg fixed across whole screen
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      // semi transparent
+      background-color: rgba($color: #000000, $alpha: .75);
+      // Must be below of jw-modal and above everhing else
+      z-index: 99;
+    }
+  }
+}
+body.popup-modal-open{
+  // body overflow is hidden to hide main scrollbar when modal window is open
+  overflow: hidden;
+}
