@@ -1,6 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, ElementRef, Inject, Input, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
-import { ModalService } from '@core/index';
+import { ModalService } from '@service/modal.service';
+
 @Component({
   selector: 'popup-modal',
   templateUrl: './modal.component.html',
@@ -8,15 +9,15 @@ import { ModalService } from '@core/index';
   encapsulation: ViewEncapsulation.None
 })
 export class ModalComponent implements OnInit, OnDestroy {
-  @Input() id!: string;
+  @Input() id: string = '';
   private element: HTMLElement;
 
   constructor(
     private modalServ: ModalService,
-    private readonly ele: ElementRef,
+    private ele: ElementRef,
     @Inject(DOCUMENT) private doc: Document
   ) {
-    this.element = this.ele.nativeElement;
+    this.element = ele.nativeElement;
   }
 
   ngOnInit(): void {
@@ -29,7 +30,7 @@ export class ModalComponent implements OnInit, OnDestroy {
     this.doc.body.appendChild(this.element);
     // close modal on background click
     this.element.addEventListener('click', (el: any) => {
-      if (el.target.className === 'popup-mdoal') {
+      if (el.target.className === 'popup-modal') {
         this.close();
       }
     });
