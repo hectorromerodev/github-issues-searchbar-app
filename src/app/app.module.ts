@@ -6,7 +6,7 @@ import { HeaderModule } from '@shared/components/header/header.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterModule } from './shared/components/footer/footer.module';
-
+import { HttpClientModule } from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,9 +14,10 @@ import { FooterModule } from './shared/components/footer/footer.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, // Just in case I don't need it delete
+    // FormsModule, // Just in case I don't need it delete
     HeaderModule,
-    FooterModule
+    FooterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
