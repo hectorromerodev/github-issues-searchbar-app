@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  BASE_URL: 'https://api.github.com/repos',
-  DEFAULT_USER_REPO: 'octocat/hello-world',
-  ISSUES: 'issues'
+  BASE_URL: 'https://api.github.com',
+  ISSUES: 'issues',
+  SEARCH: 'search'
 };
 
 /*
