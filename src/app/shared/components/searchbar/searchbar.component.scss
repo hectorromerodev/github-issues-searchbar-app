@@ -1,0 +1,37 @@
+@import '../../../../variables.scss';
+
+section.searchbar__container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .searchbar__input{
+    position: relative;
+    width: 80%;
+    label{
+      display: block;
+      font-size: 1.5rem;
+      visibility: collapse;
+    }
+    input{
+      width: 100%;
+      padding: 1rem;
+      outline: none;
+      border-radius: .5rem;
+      font-size: clamp(.8rem, 5vw + .3rem, 2rem);
+      &:focus{
+        border-color: $secondary-color;
+      }
+    }
+    button{
+      position: absolute;
+      right: 0;
+      margin: 1.2rem;
+
+      &:hover{
+        color: $danger-color;
+        transform: scale(1.4);
+        transition: transform .5s ease-in-out;
+      }
+    }
+  }
+}
