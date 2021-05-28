@@ -1,3 +1,27 @@
 <div class="container space">
-  <p class="title">Search</p>
+  <app-searchbar></app-searchbar>
+  <section class="list__container center space">
+    <div *ngIf="issues$ | async as issues">
+      <ng-container *ngIf="issues.length; else noData">
+        <ul>
+          <li *ngFor="let issue of issues">
+            <article class="issue">
+              <header class="issue__header">
+                <h3>{{issue.title}}
+                  <a href="{{issue.url}}"></a>
+                </h3>
+              </header>
+              <section class="issue__section">
+                <h4>#{{issue.number}}</h4>
+                <p>State: <span>{{ issue.state }}</span></p>
+              </section>
+            </article>
+          </li>
+        </ul>
+      </ng-container>
+      <ng-template #noData>
+        <h1>NO DATA FOUND</h1>
+      </ng-template>
+    </div>
+  </section>
 </div>

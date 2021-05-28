@@ -1,0 +1,22 @@
+.list__container{
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    li{
+      border: 1px solid coral;
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+.issue{
+  &__header{
+
+  }
+  &__section{
+    
+  }
+}
