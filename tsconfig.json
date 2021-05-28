@@ -6,7 +6,7 @@
     "paths": {
       "@environment/*":["src/environments/*"],
       "@pages/*":["src/app/pages/*"],
-      "@core/*":["src/app/core/*"],
+      "@service/*":["src/app/core/services/*"],
       "@components/*":["src/app/shared/components"],
       "@shared/*":["src/app/shared/*"],
       "@app/*":["src/app/*"]
