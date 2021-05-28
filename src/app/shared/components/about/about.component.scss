@@ -6,7 +6,7 @@ section.about__container{
     }
     &__text{
       padding: 1rem;
-      font-size: 2rem;
+      font-size: clamp(1rem, 5vw + .5rem, 2rem);
       max-width: 80%;
       text-align: justify;
       margin: 0 auto;
@@ -18,7 +18,7 @@ section.about__container{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 25px;
+  margin: 1rem;
   .fa{
     padding: 10px;
     font-size: 30px;
