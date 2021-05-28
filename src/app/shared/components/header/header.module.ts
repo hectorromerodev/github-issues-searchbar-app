@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header.component';
+import { ModalModule } from '../modal/modal.module';
+import { AboutModule } from '../about/about.module';
 
 
 
@@ -9,7 +11,9 @@ import { HeaderComponent } from './header.component';
     HeaderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ModalModule,
+    AboutModule
   ],
   exports: [
     HeaderComponent
