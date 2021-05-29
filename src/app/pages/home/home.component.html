@@ -1,26 +1,24 @@
 <div class="container space">
   <app-searchbar></app-searchbar>
-  <section class="list__container center space">
+  <section>
     <div *ngIf="issues$ | async as issues">
       <ng-container *ngIf="issues.length; else noData">
-        <ul>
-          <li *ngFor="let issue of issues">
-            <article class="issue">
-              <header class="issue__header">
-                <h3>{{issue.title}}
-                  <a href="{{issue.url}}"></a>
-                </h3>
-              </header>
-              <section class="issue__section">
-                <h4>#{{issue.number}}</h4>
-                <p>State: <span>{{ issue.state }}</span></p>
-              </section>
-            </article>
-          </li>
-        </ul>
+        <div class="list__container">
+          <ul>
+            <li *ngFor="let issue of issues">
+              <h3> {{issue.title}} #{{issue.number}} </h3>
+              <p class="position-r space-r" [attr.track]="issue.state | lowercase"> <span>{{ issue.state }}</span></p>
+              <a rel="noopener" target="_blank" role="doc-credits" href="{{issue.html_url}}" class="space-l">More info...</a>
+            </li>
+          </ul>
+        </div>
       </ng-container>
       <ng-template #noData>
-        <h1>NO DATA FOUND</h1>
+        <div class="list__container">
+          <ul >
+            <li><h1 class="text-center">nothing to show here</h1></li>
+          </ul>
+        </div>
       </ng-template>
     </div>
   </section>

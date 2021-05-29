@@ -1,22 +1,75 @@
-.list__container{
-  ul {
+// @import './src/_variables.scss';
+@import '/src/variables';
+
+div.list__container{
+  max-width: 80%;
+  width: 80%;
+  margin: auto;
+  ul{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    border: .2rem solid $secondary-color;
+    border-radius: 0 0 1rem 1rem;
+    border-top: 0;
     li{
-      border: 1px solid coral;
-      width: 100px;
-      height: 100px;
+      width: inherit;
+      display: flex;
+      justify-content: flex-start;
+      font-size: clamp(1rem, 3vw + .3rem, 1.8rem);
+      text-transform: lowercase;
+      border-top: .2rem solid $primary-color;
+      padding: 1rem .5rem;
+      h1{
+        width: inherit;
+        text-align: center;
+      }
+      h3{
+        max-width: 80%;
+      }
+      a{
+        cursor: cursor;
+        &:hover{
+          transition: all .3s ease-in-out;
+          color: $info-color;
+        }
+      }
+      &:hover{
+        transform: scale(1.09);
+        transition: all .5s ease-in-out;
+        background-color: $primary-color;
+        color: $text-color;
+        border-radius: 1rem;
+      }
     }
   }
 }
 
-.issue{
-  &__header{
 
+$states: (
+  closed: #ff0004,
+  all: #ff7300,
+  open: #07ce32,
+);
+
+@each $track, $value in map-remove($states) {
+  p[track='#{$track}'] span {
+    background: $value;
+    border-radius: 1rem;
+    padding: .3rem;
+    text-align: center;
+    margin: auto;
+    color: set-color(white);
   }
-  &__section{
-    
-  }
+}
+
+@function set-color($color) {
+    @if (lightness($color) > 40) {
+      @return #000;
+    }
+    @else {
+      @return #FFF;
+    }
 }
