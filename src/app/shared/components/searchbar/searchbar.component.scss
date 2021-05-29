@@ -1,4 +1,4 @@
-@import '../../../../variables.scss';
+@import '/src/variables';
 
 section.searchbar__container{
   display: flex;
@@ -16,7 +16,8 @@ section.searchbar__container{
       width: 100%;
       padding: 1rem;
       outline: none;
-      border-radius: .5rem;
+      border-radius: 1rem 1rem 0 0;
+      border-bottom: 0;
       font-size: clamp(.8rem, 5vw + .3rem, 2rem);
       &:focus{
         border-color: $secondary-color;
