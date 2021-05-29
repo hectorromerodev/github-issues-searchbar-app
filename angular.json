@@ -29,7 +29,10 @@
             "assets": [
               "src/favicon.ico"
             ],
-            "styles": ["src/styles.scss", "src/_variables.scss"],
+            "styles": [
+              "src/styles.scss",
+              "src/_variables.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -100,6 +103,10 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
