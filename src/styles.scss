@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
-@import './variables.scss';
+@import 'variables';
 
 *,
 *::before,
@@ -52,10 +52,14 @@ footer{
   font-size: clamp(2.5rem, 5vw + .5rem, 4rem);
 }
 
-.text-white {
-  color: #fff;
+.text{
+  &-white {
+    color: #fff;
+  }
+  &-center{
+    text-align: center;
+  }
 }
-
 .center{
   display: flex;
   align-items: center;
@@ -71,6 +75,11 @@ footer{
 }
 
 .position{
+  &-c{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
   &-r{
     display: flex;
     justify-content: flex-end;
