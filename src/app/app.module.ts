@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HeaderModule } from '@shared/components/header/header.module';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterModule } from './shared/components/footer/footer.module';
-import { HttpClientModule } from '@angular/common/http'
+import { FooterModule } from '@shared/components/footer/footer.module';
+import { HeaderModule } from '@shared/components/header/header.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +13,6 @@ import { HttpClientModule } from '@angular/common/http'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // FormsModule, // Just in case I don't need it delete
     HeaderModule,
     FooterModule,
     HttpClientModule
