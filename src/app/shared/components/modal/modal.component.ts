@@ -4,7 +4,14 @@ import { ModalService } from '@service/modal.service';
 
 @Component({
   selector: 'popup-modal',
-  templateUrl: './modal.component.html',
+  template: `
+    <div class="popup-modal" [style.max-width]="width">
+      <div class="popup-modal-body">
+        <ng-content></ng-content>
+      </div>
+    </div>
+    <div class="popup-modal-background"></div>
+  `,
   styleUrls: ['./modal.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
