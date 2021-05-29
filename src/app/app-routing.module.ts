@@ -7,7 +7,6 @@ const routes: Routes = [
   // Otherwise redirect to home
   { path: '**', redirectTo: '' }
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
